@@ -14,7 +14,7 @@ resource "openstack_networking_subnet_v2" "sub_red" {
 #creamos el router
 resource "openstack_networking_router_v2" "router_1" {
   name                = "${var.router}"
-  external_network_id = "16168b9c-c8cb-4d10-9ab8-43a91aaa556b"
+  external_network_id = data.openstack_networking_network_v2.network.id
 }
 #Realizamos la conecion el router con la sub red 
 resource "openstack_networking_router_interface_v2" "router_interface" {

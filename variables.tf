@@ -42,3 +42,6 @@ variable "keypair_publica" {
     description = "Nombre de la clave publica en openstack."
     default  = "clave"
 }
+variable "AUTH_URL" {}
+variable "USUARIO" {}
+variable "PASSWORD" {}

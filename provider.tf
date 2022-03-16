@@ -11,10 +11,10 @@ terraform {
 
 # Configurar el proveedor de OpenStack
 provider "openstack" {
-  user_name   = "admin"
-  tenant_name = "admin"
-  password    = "093f243c0ba848d5"
-  auth_url    = "http://172.16.0.9:5000/v3"
+  user_name   = var.USUARIO
+  tenant_name = var.USUARIO
+  password    = var.PASSWORD
+  auth_url    = var.AUTH_URL
   region      = "RegionOne"
   domain_name = "Default"
 }
